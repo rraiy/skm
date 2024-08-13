@@ -1,7 +1,7 @@
 // Variables
 $primary-color: #3A8DDE;
 $secondary-color: #fff35f;
-$text-color: #333;
+$text-color: #fff;
 $background-color: #46a9ff;
 
 // Mixins
@@ -13,16 +13,21 @@ $background-color: #46a9ff;
 
 // Global styles
 body {
+    width: 100vw;
+    min-height: 4320px;
     font-family: Arial, sans-serif;
-    background-color: $background-color;
+    background-image: url("../imgs/background-pc.png");    
+    background-repeat: no-repeat; 
+    background-position: center;
     color: $text-color;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-// Header
 header {
     @include flex-center;
+    height: 148px;
     padding: 20px;
     background-color: white;
 
@@ -31,92 +36,64 @@ header {
     }
 }
 
-// Main content
+.mobile-item {
+    display: none;
+}
+
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-// Hero section
-.hero {
-    position: relative;
-    margin-bottom: 30px;
-
-    .hero-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .line {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        left: 0;
-        bottom: 72px;
-    }
-}
-
-// Promotion section
-.promotion {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-bottom: 30px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 148px;
 
-    .button-img {
-        position: relative;
+    section {
+        width: 1200px;
+    }
+}
 
-        .background {
-            @include flex-center;
-            position: absolute;
-            width: 200px;
-            height: 60px;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: $secondary-color;
-            border-radius: 40px;
-            bottom: 20px;
-            left: 50%;
-        }
+.promotion {
+    @include flex-center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    margin-top: 1120px;
 
-        img {
-            width: 120px;
-        }
+    .discount {
+        width: 100%;
     }
 
-    .promotion-title,
+    .promotion-text {
+        display: flex;
+        align-items: center; 
+        margin-bottom: 20px;       
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 12px;
+        }
+    
+        span {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+    }
+    
     .promotion-subtitle {
         max-width: 100%;
         height: auto;
         margin-bottom: 20px;
     }
 
-    .offers {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        .offer-image {
-            width: 45%;
-            margin-bottom: 20px;
-
-            @media (min-width: 768px) {
-                width: 22%;
-            }
-        }
-    }
 }
 
-// Notes section
 .notes {
-    background-image: url(../imgs/white.png) ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 272px;
 
     .notes-button {
         background-color: $secondary-color;
@@ -129,28 +106,120 @@ main {
     }
 
     .notes-content {
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        @include flex-center;
+        max-width: 1200px;
+        width: 100vw;
+        margin-top: 40px;
+        .text {
+            width: 80%;
+            border: 2px white solid;;
+            div {
+                padding: 28px;
+            }
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                line-height: 32px;
+            }
+        }
+        
+    }
+}
 
-        p {
-            margin-bottom: 10px;
-            line-height: 1.5;
+.shop-list {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 360px;  
+    
+    .shops {
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 990px) {
+    body {   
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .notes {
+        width: 100vw;
+        margin-bottom: 120px;
+
+        .notes-content {
+            width: 90%;
+            height: 700px;
+            background-color: white;
+            img {
+                display: none;
+            }
+        }
+
+        .text {
+            width: 80%;
         }
     }
 }
 
-// Responsive adjustments
 @media (max-width: 767px) {
+    body {
+        background-image: url("../imgs/mobile/background-mobile.jpg");    
+    }
+
+    .pc-item {
+        display: none;
+    }
+
+    .mobile-item {
+        display: block;
+    }
+
+    header {
+        @include flex-center;
+        height: 80px;
+        padding: 0;
+        background-color: white;
+    
+        .logo {
+            width: 100px;
+        }
+    }
+
     main {
-        padding: 10px;
+        padding-top: 0;
     }
 
     .promotion {
-        .offers {
-            .offer-image {
-                width: 100%;
+        
+    }
+
+    .notes {
+        width: 100vw;
+        margin-bottom: 80px;
+
+        .notes-content {
+            height: fit-content;
+            background-color: white;
+            img {
+                display: none;
+            }
+
+            .text {
+                width: 80%;
+                position: static;
+                margin-left: 32px;
             }
         }
+        
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-size: cover;
     }
 }
