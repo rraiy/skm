@@ -44,33 +44,13 @@ main section {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 1200px;
   width: 90%;
   margin-top: 1120px;
 }
-.promotion .discount {
-  width: 100%;
-}
-.promotion .promotion-text {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.promotion .promotion-text p {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 12px;
-}
-.promotion .promotion-text span {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.promotion .promotion-subtitle {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+.promotion img {
+  width: 440px;
 }
 
 .notes {
@@ -122,39 +102,61 @@ main section {
   display: flex;
   justify-content: space-between;
   width: 1000px;
-  margin-top: 80px;
+  margin-top: 180px;
 }
 
 @media (max-width: 990px) {
   body {
-    background-position: bottom;
-    background-size: cover;
+    background-image: url("../imgs/mobile/background-tablet.png");
+    min-height: 5995px;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .promotion {
+    display: none;
   }
   .notes {
     width: 100vw;
-    margin-bottom: 120px;
+    margin-top: 3620px;
   }
   .notes .notes-content {
     width: 90%;
     height: 700px;
-    background-color: white;
   }
   .notes .notes-content img {
     display: none;
   }
-  .notes .text {
+  .notes .notes-content .text {
     width: 80%;
   }
+  .notes .notes-content .text p {
+    font-size: 24px;
+    line-height: 2em;
+  }
+  .shop-list {
+    max-width: 680px;
+    margin-top: 500px;
+  }
+  .shop-list .shops {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .shop-list .shops a {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 40px;
+  }
+  .shop-list .shops a img {
+    width: 100%;
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   body {
-    background-image: url("../imgs/mobile/background-mobile.jpg");
-  }
-  .pc-item {
-    display: none;
-  }
-  .mobile-item {
-    display: block;
+    min-height: 3600px;
+    background-image: url("../imgs/mobile/background-mobile.png");
+    background-position: top;
   }
   header {
     display: flex;
@@ -168,28 +170,44 @@ main section {
     width: 100px;
   }
   main {
-    padding-top: 0;
+    margin-top: 0px;
   }
   .notes {
     width: 100vw;
-    margin-bottom: 80px;
+    margin-top: 2024px;
   }
   .notes .notes-content {
-    height: -moz-fit-content;
-    height: fit-content;
-    background-color: white;
+    width: 380px;
+    height: 700px;
   }
   .notes .notes-content img {
     display: none;
   }
   .notes .notes-content .text {
-    width: 80%;
-    position: static;
-    margin-left: 32px;
+    width: 400px;
+    margin-top: 280px;
   }
-}
-@media (max-width: 500px) {
-  body {
-    background-size: cover;
+  .notes .notes-content .text div {
+    padding: 12px;
+  }
+  .notes .notes-content .text p {
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+  .shop-list {
+    margin-top: 154px;
+  }
+  .shop-list .shops {
+    width: 380px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .shop-list .shops a {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+  }
+  .shop-list .shops a img {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
