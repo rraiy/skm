@@ -50,7 +50,7 @@ main section {
   margin-top: 1120px;
 }
 .promotion img {
-  width: 440px;
+  width: 480px;
 }
 
 .notes {
@@ -58,7 +58,7 @@ main section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 272px;
+  margin-top: 388px;
 }
 .notes .notes-button {
   background-color: #fff35f;

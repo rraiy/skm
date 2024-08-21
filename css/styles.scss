@@ -62,14 +62,14 @@ main {
     margin-top: 1120px;
 
     img {
-        width: 440px;
+        width: 480px;
     }
 }
 
 .notes {
     @include flex-center;
     flex-direction: column;
-    margin-top: 272px;
+    margin-top: 388px;
 
     .notes-button {
         background-color: $secondary-color;
