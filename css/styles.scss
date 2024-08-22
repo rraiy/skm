@@ -13,6 +13,7 @@ $background-color: #46a9ff;
 
 // Global styles
 body {
+    position: relative;
     width: 100vw;
     min-height: 4320px;
     font-family: Arial, sans-serif;
@@ -116,6 +117,17 @@ main {
     }
 }
 
+.footer {
+    position: absolute;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    text-align: center;
+}
+
 @media (max-width: 990px) {
     body {   
         background-image: url("../imgs/mobile/background-tablet.png");    
@@ -151,7 +163,7 @@ main {
 
     .shop-list {
         max-width: 680px;
-        margin-top: 500px;
+        margin-top: 440px;
 
         .shops {
             width: 100%;
