@@ -1,7 +1,7 @@
 body {
   position: relative;
   width: 100vw;
-  min-height: 4320px;
+  min-height: 4133px;
   font-family: Arial, sans-serif;
   background-image: url("../imgs/background-pc.png");
   background-repeat: no-repeat;
@@ -35,7 +35,6 @@ main {
   justify-content: center;
   margin: 0 auto;
   padding: 20px;
-  margin-top: 148px;
 }
 main section {
   width: 1200px;
@@ -48,7 +47,7 @@ main section {
   justify-content: space-evenly;
   max-width: 1200px;
   width: 90%;
-  margin-top: 1120px;
+  margin-top: 1300px;
 }
 .promotion img {
   width: 480px;
@@ -59,7 +58,7 @@ main section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 388px;
+  margin-top: 360px;
 }
 .notes .notes-button {
   background-color: #fff35f;
@@ -97,7 +96,7 @@ main section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 360px;
+  margin-top: 264px;
 }
 .shop-list .shops {
   display: flex;
@@ -120,7 +119,7 @@ main section {
 @media (max-width: 990px) {
   body {
     background-image: url("../imgs/mobile/background-tablet.png");
-    min-height: 5995px;
+    min-height: 5868px;
   }
   .mobile-hidden {
     display: none;
@@ -135,6 +134,7 @@ main section {
   .notes .notes-content {
     width: 90%;
     height: 700px;
+    margin-top: 254px;
   }
   .notes .notes-content img {
     display: none;
@@ -165,20 +165,8 @@ main section {
 }
 @media (max-width: 700px) {
   body {
-    min-height: 3600px;
+    min-height: 3526px;
     background-image: url("../imgs/mobile/background-mobile.png");
-    background-position: center;
-  }
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    padding: 0;
-    background-color: white;
-  }
-  header .logo {
-    width: 100px;
   }
   main {
     margin-top: 0px;
@@ -190,7 +178,7 @@ main section {
   }
   .notes .notes-content {
     width: 380px;
-    height: 700px;
+    margin-top: 36px;
   }
   .notes .notes-content img {
     display: none;
@@ -200,7 +188,7 @@ main section {
     margin-top: 280px;
   }
   .notes .notes-content .text div {
-    padding: 12px;
+    padding: 8px 12px;
   }
   .notes .notes-content .text p {
     font-size: 18px;
