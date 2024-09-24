@@ -1,27 +1,15 @@
+.mobile {
+  display: none;
+}
+
 body {
   position: relative;
   width: 100vw;
-  min-height: 4133px;
   font-family: Arial, sans-serif;
-  background-image: url("../imgs/background-pc.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
+  color: #000;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 148px;
-  padding: 20px;
-  background-color: white;
-}
-header .logo {
-  max-width: 200px;
 }
 
 .mobile-item {
@@ -34,35 +22,30 @@ main {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 20px;
 }
 main section {
   width: 1200px;
 }
 
-.promotion {
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  max-width: 1200px;
-  width: 90%;
-  margin-top: 1300px;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
 }
-.promotion img {
-  width: 480px;
-}
-
 .notes {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 360px;
+  margin-top: 160px;
+  margin-bottom: 160px;
 }
 .notes .notes-button {
   background-color: #fff35f;
-  color: #fff;
+  color: #000;
   border: none;
   padding: 10px 20px;
   font-size: 18px;
@@ -76,6 +59,7 @@ main section {
   max-width: 1200px;
   width: 100vw;
   margin-top: 40px;
+  margin-bottom: 100px;
 }
 .notes .notes-content .text {
   width: 80%;
@@ -90,22 +74,39 @@ main section {
   margin-bottom: 10px;
   line-height: 32px;
 }
+.notes .notes-content .text a {
+  color: red;
+}
 
 .shop-list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 264px;
+  margin-top: 160px;
 }
 .shop-list .shops {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
-  margin-top: 180px;
+  margin-top: 60px;
+}
+.shop-list .shops > a {
+  padding: 12px;
+  border: 2px solid gray;
+  border-radius: 24px;
+  margin-right: 20px;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   font-size: 16px;
   margin-left: auto;
@@ -116,25 +117,17 @@ main section {
   text-align: center;
 }
 
+@media (max-width: 1200px) {
+  .hero img {
+    width: 100vw;
+  }
+}
 @media (max-width: 990px) {
-  body {
-    background-image: url("../imgs/mobile/background-tablet.png");
-    min-height: 5868px;
-  }
-  .mobile-hidden {
-    display: none;
-  }
-  .promotion {
-    display: none;
-  }
   .notes {
     width: 100vw;
-    margin-top: 3620px;
   }
   .notes .notes-content {
     width: 90%;
-    height: 700px;
-    margin-top: 254px;
   }
   .notes .notes-content img {
     display: none;
@@ -147,7 +140,6 @@ main section {
   }
   .shop-list {
     max-width: 680px;
-    margin-top: 440px;
   }
   .shop-list .shops {
     width: 100%;
@@ -162,30 +154,56 @@ main section {
   .shop-list .shops a img {
     width: 100%;
   }
-}
-@media (max-width: 700px) {
-  body {
-    min-height: 3526px;
-    background-image: url("../imgs/mobile/background-mobile.png");
+  .wave {
+    width: 50%;
   }
-  main {
-    margin-top: 0px;
-    overflow-x: hidden;
+  .footer {
+    bottom: 100px;
+  }
+}
+@media (max-width: 750px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header img {
+    width: 380px;
+  }
+  main section {
+    width: 100vw;
+  }
+  .hero-m {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero-m img {
+    width: 380px;
   }
   .notes {
     width: 100vw;
-    margin-top: 2024px;
+    margin-top: 60px;
+  }
+  .notes img {
+    width: 136px;
   }
   .notes .notes-content {
     width: 380px;
-    margin-top: 36px;
+    margin-top: 0;
   }
   .notes .notes-content img {
     display: none;
   }
   .notes .notes-content .text {
     width: 400px;
-    margin-top: 280px;
   }
   .notes .notes-content .text div {
     padding: 8px 12px;
@@ -195,7 +213,10 @@ main section {
     line-height: 1.2em;
   }
   .shop-list {
-    margin-top: 154px;
+    margin-top: 60px;
+  }
+  .shop-list .shop-title {
+    width: 300px;
   }
   .shop-list .shops {
     width: 380px;
@@ -203,11 +224,15 @@ main section {
     justify-content: space-evenly;
   }
   .shop-list .shops a {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 20px;
+    margin-right: 0;
   }
   .shop-list .shops a img {
     width: 100%;
+  }
+  footer {
+    bottom: 136px;
   }
 }/*# sourceMappingURL=styles.css.map */

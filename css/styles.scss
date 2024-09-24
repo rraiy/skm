@@ -1,8 +1,9 @@
 // Variables
 $primary-color: #3A8DDE;
 $secondary-color: #fff35f;
-$text-color: #fff;
+$text-color: #000;
 $background-color: #46a9ff;
+$mobile-img-w: 380px;
 
 // Mixins
 @mixin flex-center {
@@ -11,31 +12,21 @@ $background-color: #46a9ff;
     align-items: center;
 }
 
+.mobile {
+    display: none;
+}
+
 // Global styles
 body {
     position: relative;
     width: 100vw;
-    min-height: 4133px;
     font-family: Arial, sans-serif;
-    background-image: url("../imgs/background-pc.png");    
-    background-repeat: no-repeat; 
-    background-position: center;
     color: $text-color;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-header {
-    @include flex-center;
-    height: 148px;
-    padding: 20px;
-    background-color: white;
-
-    .logo {
-        max-width: 200px;
-    }
-}
 
 .mobile-item {
     display: none;
@@ -47,29 +38,28 @@ main {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 20px;
 
     section {
         width: 1200px;
     }
 }
 
-.promotion {
+.hero {
     @include flex-center;
-    justify-content: space-evenly;
-    max-width: 1200px;
-    width: 90%;
-    margin-top: 1300px;
+    flex-direction: column;
+    max-width: 1400px;
+    width: 100%;
 
     img {
-        width: 480px;
+        // width: 480px;
     }
 }
 
 .notes {
     @include flex-center;
     flex-direction: column;
-    margin-top: 360px;
+    margin-top: 160px;
+    margin-bottom: 160px;
 
     .notes-button {
         background-color: $secondary-color;
@@ -86,6 +76,7 @@ main {
         max-width: 1200px;
         width: 100vw;
         margin-top: 40px;
+        margin-bottom: 100px;
         .text {
             width: 80%;
             border: 2px white solid;;
@@ -98,6 +89,9 @@ main {
                 margin-bottom: 10px;
                 line-height: 32px;
             }
+            a {
+                color: red;
+            }
         }
         
     }
@@ -106,17 +100,30 @@ main {
 .shop-list {
     @include flex-center;
     flex-direction: column;
-    margin-top: 264px;  
+    margin-top: 160px;  
     
     .shops {
         display: flex;
         justify-content: space-between;
-        width: 1000px;
-        margin-top: 180px;
+        margin-top: 60px;
+
+        > a {
+            padding: 12px;
+            border: 2px solid gray;
+            border-radius: 24px;
+            margin-right: 20px;
+        }
     }
 }
 
+.wave {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 .footer {
+    @include flex-center;
     position: absolute;
     font-size: 16px;
     margin-left: auto;
@@ -127,28 +134,21 @@ main {
     text-align: center;
 }
 
+@media (max-width: 1200px) {
+    .hero {
+        img {
+            width: 100vw;
+        }
+    }
+}
+
 @media (max-width: 990px) {
-    body {   
-        background-image: url("../imgs/mobile/background-tablet.png");    
-        min-height: 5868px;
-    }
-
-    .mobile-hidden {
-        display: none;
-    }
-
-    .promotion {
-        display: none;
-    }
 
     .notes {
         width: 100vw;
-        margin-top: 3620px;
 
         .notes-content {
             width: 90%;
-            height: 700px;
-            margin-top: 254px;
             img {
                 display: none;
             }
@@ -163,7 +163,6 @@ main {
 
     .shop-list {
         max-width: 680px;
-        margin-top: 440px;
 
         .shops {
             width: 100%;
@@ -179,33 +178,72 @@ main {
             }
         }
     }
-}
 
-@media (max-width: 700px) {
-    body {
-        min-height: 3526px; 
-        background-image: url("../imgs/mobile/background-mobile.png"); 
+    .wave {
+        width: 50%;
     }
 
-    main {
-        margin-top: 0px;
-        overflow-x: hidden;
+    .footer {
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        img {
+            width: $mobile-img-w;
+        }
+    }
+
+    main { 
+        section {
+            width: 100vw;
+        }
+    }
+
+    // main {
+    //     margin-top: 0px;
+    //     overflow-x: hidden;
+    // }
+
+    .hero-m {
+        @include flex-center;
+        flex-direction: column;
+        img {
+            width: $mobile-img-w;
+        }
     }
 
 
     .notes {
         width: 100vw;
-        margin-top: 2024px;
-
+        margin-top: 60px;
+        img {
+            width: 136px;
+        }
         .notes-content {
             width: 380px;
-            margin-top: 36px;
+            margin-top: 0;
             img {
                 display: none;
             }
             .text {
                 width: 400px;
-                margin-top: 280px;
                 div {
                     padding: 8px 12px;
                 }
@@ -218,19 +256,27 @@ main {
     }
 
     .shop-list {
-        margin-top: 154px;
+        margin-top: 60px;
+        .shop-title {
+            width: 300px;
+        }
         .shops {
             width: 380px;
             flex-wrap: wrap;
             justify-content: space-evenly;
             a {
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
                 margin-bottom: 20px;
+                margin-right: 0;
                 img {
                     width: 100%;
                 }
             }
         }
+    }
+
+    footer {
+        bottom: 136px;
     }
 }
