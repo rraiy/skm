@@ -61,16 +61,6 @@ main {
     margin-top: 160px;
     margin-bottom: 160px;
 
-    .notes-button {
-        background-color: $secondary-color;
-        color: $text-color;
-        border: none;
-        padding: 10px 20px;
-        font-size: 18px;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-
     .notes-content {
         @include flex-center;
         max-width: 1200px;
@@ -90,6 +80,7 @@ main {
                 line-height: 32px;
             }
             a {
+                text-decoration: none;
                 color: red;
             }
         }
