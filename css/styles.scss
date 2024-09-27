@@ -49,9 +49,14 @@ main {
     flex-direction: column;
     max-width: 1400px;
     width: 100%;
+    position: relative;
+}
 
+.logo {
+    position: absolute;
+    top: 12px;
     img {
-        // width: 480px;
+        width: 240px;
     }
 }
 
@@ -131,6 +136,12 @@ main {
             width: 100vw;
         }
     }
+
+    .logo {
+        img {
+            width: 120px;
+        }
+    }
 }
 
 @media (max-width: 990px) {
@@ -201,16 +212,18 @@ main {
         }
     }
 
+    .logo {
+        top: 8px;
+        img {
+            width: 80px;
+        }
+    }
+
     main { 
         section {
             width: 100vw;
         }
     }
-
-    // main {
-    //     margin-top: 0px;
-    //     overflow-x: hidden;
-    // }
 
     .hero-m {
         @include flex-center;

@@ -34,7 +34,17 @@ main section {
   flex-direction: column;
   max-width: 1400px;
   width: 100%;
+  position: relative;
 }
+
+.logo {
+  position: absolute;
+  top: 12px;
+}
+.logo img {
+  width: 240px;
+}
+
 .notes {
   display: flex;
   justify-content: center;
@@ -113,6 +123,9 @@ main section {
   .hero img {
     width: 100vw;
   }
+  .logo img {
+    width: 120px;
+  }
 }
 @media (max-width: 990px) {
   .notes {
@@ -167,6 +180,12 @@ main section {
   }
   header img {
     width: 380px;
+  }
+  .logo {
+    top: 8px;
+  }
+  .logo img {
+    width: 80px;
   }
   main section {
     width: 100vw;
