@@ -21,7 +21,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
 }
 main section {
   width: 1200px;
@@ -38,11 +37,8 @@ main section {
   background-color: #2c258e;
 }
 .hero .hero-main {
-  max-width: 1440px;
-}
-.hero .plane {
-  position: absolute;
-  bottom: -64px;
+  margin-top: 100px;
+  max-width: 1300px;
 }
 
 .week {
@@ -50,12 +46,12 @@ main section {
   height: 1600px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #2c258e;
 }
 .week .week-content {
-  max-width: 1200px;
+  max-width: 1160px;
   width: 100vw;
-  margin-top: 100px;
 }
 
 .logo {
@@ -154,13 +150,20 @@ main section {
 
 @media (max-width: 1200px) {
   .hero {
-    height: 1140px;
+    height: 1100px;
   }
-  .hero img {
-    width: 100vw;
+  .hero .hero-main {
+    margin-top: 80px;
+    max-width: 860px;
   }
   .logo img {
     width: 120px;
+  }
+  .week {
+    height: 1000px;
+  }
+  .week .week-content {
+    width: 80vw;
   }
   .shops {
     width: 100%;
@@ -188,9 +191,6 @@ main section {
   .notes .notes-content {
     width: 90%;
   }
-  .notes .notes-content img {
-    display: none;
-  }
   .notes .notes-content .text {
     width: 80%;
   }
@@ -217,70 +217,44 @@ main section {
     width: 100vw;
   }
   .hero-m {
-    height: 680px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #D4FDFF;
+    height: 880px;
+    background: top no-repeat url("../imgs/mobile/hero-bg.png");
+    background-size: contain;
+    background-color: #2c258e;
     position: relative;
   }
-  .hero-m img {
-    width: 380px;
+  .hero-m .hero-main {
+    max-width: 360px;
+    width: 80vw;
+    padding-left: 40px;
   }
   .hero-m .logo img {
     width: 100px;
   }
-  .hero-m .plane {
-    position: absolute;
-    bottom: -16px;
+  .week {
+    height: 600px;
   }
   .shop-list {
-    height: 800px;
-    justify-content: flex-start;
+    padding-bottom: 60px;
   }
   .shop-list .shop-title {
-    width: 300px;
+    width: 260px;
     margin-top: 40px;
   }
   .shop-list .shops {
     width: 380px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    position: relative;
   }
   .shop-list .shops a {
     width: 120px;
     height: 120px;
-    position: absolute;
   }
   .shop-list .shops a img {
     width: 100%;
-  }
-  .shop-list .shops .gift {
-    width: 125px;
-    position: absolute;
-    top: -70px;
-    right: 0;
-  }
-  .shop-list .shops .shop-1 {
-    top: -40px;
-    left: 24px;
-    transform: rotate(355deg);
-  }
-  .shop-list .shops .shop-2 {
-    top: 88px;
-    right: 24px;
-    transform: rotate(5deg);
-  }
-  .shop-list .shops .shop-3 {
-    top: 270px;
-    left: 40px;
-    transform: rotate(357deg);
-  }
-  .shop-list .shops .shop-4 {
-    top: 448px;
-    right: 24px;
-    transform: rotate(6deg);
   }
   .notes {
     width: 100vw;
@@ -288,13 +262,18 @@ main section {
   .notes img {
     width: 136px;
   }
+  .notes .notice-title {
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
   .notes .notes-content {
     width: 368px;
-    margin-top: 40px;
-    border-radius: 12px;
+    margin-top: 0px;
   }
-  .notes .notes-content img {
-    display: none;
+  .notes .notes-content .border {
+    width: 372px;
+    top: 100px;
+    filter: drop-shadow(0px 0px 0 #118800);
   }
   .notes .notes-content .text {
     width: 400px;
@@ -303,10 +282,10 @@ main section {
     padding: 8px 12px;
   }
   .notes .notes-content .text p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2em;
   }
-  footer {
-    bottom: 136px;
+  .footer {
+    bottom: 40px;
   }
 }/*# sourceMappingURL=styles.css.map */
