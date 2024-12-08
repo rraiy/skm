@@ -27,17 +27,13 @@ body {
     overflow-x: hidden;
 }
 
-
-.mobile-item {
-    display: none;
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // margin: 0 auto;
+    margin: 0 auto;
+    width: 100vw;
 
     section {
         width: 1200px;
@@ -67,11 +63,25 @@ main {
     justify-content: center;
     align-items: center;
     background-color: $background-color;
+    position: relative;
 
     .week-content {
         max-width: 1160px;
         width: 100vw;
-        // margin-top: 100px;
+    }
+
+    .gold {
+        position: absolute;
+
+        &.right {
+            right: -388px;
+            bottom: -336px;
+        }
+
+        &.left {
+            left: -340px;
+            top: 20px;
+        }
     }
 }
 
@@ -205,6 +215,26 @@ main {
 }
 
 @media (max-width: 990px) {
+    .week {
+        .week-content {
+            max-width: 440px;
+        }
+        .gold {
+            
+            &.right {
+                width: 580px;
+                right: -324px;
+                bottom: -200px;
+            }
+    
+            &.left {
+                width: 580px;
+                left: -388px;
+                top: 0px;
+            }
+        }
+    }
+
     .shop-list {
 
         .shops {
@@ -265,7 +295,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 880px;
+        height: 830px;
         background: top no-repeat url("../imgs/mobile/hero-bg.png");
         background-size: contain;
         background-color: $background-color;
@@ -285,7 +315,22 @@ main {
     }
 
     .week {
-        height: 600px;
+        height: 560px;
+
+        .gold {
+            
+            &.right {
+                width: 300px;
+                right: -168px;
+                bottom: -80px;
+            }
+    
+            &.left {
+                width: 300px;
+                left: -136px;
+                top: -76px;
+            }
+        }
     }
 
     .shop-list {
