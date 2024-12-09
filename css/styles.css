@@ -47,6 +47,7 @@ main section {
   align-items: center;
   background-color: #2c258e;
   position: relative;
+  overflow: hidden;
 }
 .week .week-content {
   max-width: 1160px;
@@ -211,14 +212,17 @@ main section {
     width: 100vw;
     padding-top: 0;
   }
+  .notes .border {
+    top: 236px;
+  }
   .notes .notes-content {
-    width: 90%;
+    width: 98%;
   }
   .notes .notes-content .text {
     width: 80%;
   }
   .notes .notes-content .text p {
-    font-size: 24px;
+    font-size: 20px;
   }
   .footer {
     bottom: 100px;
@@ -250,7 +254,7 @@ main section {
     position: relative;
   }
   .hero-m .hero-main {
-    max-width: 360px;
+    max-width: 320px;
     width: 80vw;
     padding-left: 40px;
   }
@@ -258,7 +262,7 @@ main section {
     width: 100px;
   }
   .week {
-    height: 560px;
+    height: 480px;
   }
   .week .gold.right {
     width: 300px;
@@ -306,10 +310,9 @@ main section {
   .notes .notes-content .border {
     width: 372px;
     top: 100px;
-    filter: drop-shadow(0px 0px 0 #118800);
   }
   .notes .notes-content .text {
-    width: 400px;
+    width: 372px;
   }
   .notes .notes-content .text div {
     padding: 8px 12px;
