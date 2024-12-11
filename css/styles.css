@@ -114,6 +114,7 @@ main section {
 .notes .border {
   position: absolute;
   top: 300px;
+  pointer-events: none;
 }
 .notes .notes-content {
   display: flex;
@@ -278,8 +279,8 @@ main section {
     padding-bottom: 60px;
   }
   .shop-list .shop-title {
-    width: 260px;
-    margin-top: 40px;
+    width: 200px;
+    margin: 40px 0;
   }
   .shop-list .shops {
     width: 380px;
@@ -300,7 +301,7 @@ main section {
     width: 136px;
   }
   .notes .notice-title {
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 8px;
   }
   .notes .notes-content {

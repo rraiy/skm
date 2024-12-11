@@ -136,6 +136,7 @@ main {
     .border {
         position: absolute;
         top: 300px;
+        pointer-events: none;
     }
 
     .notes-content {
@@ -339,8 +340,8 @@ main {
     .shop-list {
         padding-bottom: 60px;
         .shop-title {
-            width: 260px;
-            margin-top: 40px;
+            width: 200px;
+            margin: 40px 0;
         }
         .shops {
             width: 380px;
@@ -362,7 +363,7 @@ main {
             width: 136px;
         }
         .notice-title {
-            font-size: 24px;
+            font-size: 20px;
             letter-spacing: 8px;
         }
         .notes-content {
